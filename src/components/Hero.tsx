@@ -53,7 +53,7 @@ export const Hero = () => {
 
         {/* Download CV button */}
         <motion.a
-          href="/dayanand-resume.pdf"
+          href="/dayanand_resume.pdf"
           download="Dayanand_CV"
           style={{
             border: border as unknown as string,
