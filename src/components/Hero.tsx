@@ -48,7 +48,7 @@ export const Hero = () => {
         </h1>
         <Image src={profilepic} alt="profile pic" width={250} />
         <p className="my-6 max-w-xl text-center">
-          Fullstack Developer based in Bangalore, with 1.5 years of experience
+          Front-End Developer based in Bangalore, with 1.5 years of experience
         </p>
 
         {/* Download CV button */}
