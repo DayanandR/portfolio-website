@@ -44,6 +44,15 @@ const projects = [
 
 const COLORS_TOP = ["#13FFAA", "#1E67C5", "#CE84CF", "#DD335C"];
 
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  image: { src: string };
+  link?: string;
+  github: string;
+};
+
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(projects[0]);
   const color = useMotionValue(COLORS_TOP[0]);
@@ -61,6 +70,14 @@ const Portfolio = () => {
     });
   }, []);
   if (!hasMounted) return null;
+
+  const handleClick = (project: Project) => {
+    if (project.id === 3) {
+      window.open(project.github, "_blank");
+    } else if (project.link) {
+      window.open(project.link, "_blank");
+    }
+  };
 
   return (
     <>
@@ -103,9 +120,10 @@ const Portfolio = () => {
             <Image
               src={selectedProject.image.src}
               alt={selectedProject.title}
-              className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
+              className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out cursor-pointer"
               width={500}
               height={450}
+              onClick={() => handleClick(selectedProject)}
             />
             <div className="mt-6 flex justify-start items-center gap-6">
               {selectedProject.link && (
