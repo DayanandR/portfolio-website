@@ -7,7 +7,7 @@ import {
   useMotionValue,
 } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import profilepic from "@/assets/profilepic.png";
 import { FiArrowRight } from "react-icons/fi";
 
