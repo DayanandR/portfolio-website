@@ -14,11 +14,9 @@ import { FiArrowRight } from "react-icons/fi";
 const COLORS_TOP = ["#13FFAA", "#1E67C5", "#CE84CF", "#DD335C"];
 
 export const Hero = () => {
-  const [hasMounted, setHasMounted] = useState(false);
   const color = useMotionValue(COLORS_TOP[0]);
 
   useEffect(() => {
-    setHasMounted(true);
     animate(color, COLORS_TOP, {
       ease: "easeInOut",
       duration: 10,
@@ -30,8 +28,6 @@ export const Hero = () => {
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #000 50%, ${color})`;
   const border = useMotionTemplate`1px solid ${color}`;
   const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
-
-  if (!hasMounted) return null;
 
   return (
     <motion.section
