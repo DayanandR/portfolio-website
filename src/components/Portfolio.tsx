@@ -20,7 +20,7 @@ const projects = [
     description:
       "Built using Gemini API for AI-powered trip planning, Google Authentication for secure user login, Node.js for backend, and Firebase for database and authentication management.",
     image: project1,
-    link: "https://ai-trip-planner-dun.vercel.app/",
+    link: "https://ai-trip-planner-olive-eight.vercel.app",
     github: "https://github.com/DayanandR/ai-trip-planner",
   },
   {
