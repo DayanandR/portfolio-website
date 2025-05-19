@@ -20,10 +20,7 @@ import {
   SiMongodb,
   SiSocketdotio,
   SiExpress,
-  SiTailwindcss,
   SiFramer,
-  SiRedux,
-  SiJavascript,
   SiMui,
 } from "react-icons/si";
 
@@ -102,6 +99,7 @@ const Portfolio = () => {
       repeatType: "mirror",
     });
   }, []);
+
   if (!hasMounted) return null;
 
   const handleClick = (project: Project) => {

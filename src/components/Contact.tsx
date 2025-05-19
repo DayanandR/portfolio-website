@@ -9,7 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Contact = () => {
   const [state, handleSubmit] = useForm("xjkweozr");
 
-  const handleFormSubmit = (event: any) => {
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     handleSubmit(event);
   };
