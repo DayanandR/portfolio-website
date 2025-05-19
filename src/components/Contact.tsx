@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useForm } from "@formspree/react";
@@ -9,13 +9,14 @@ import "react-toastify/dist/ReactToastify.css";
 const Contact = () => {
   const [state, handleSubmit] = useForm("xjkweozr");
 
-  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = (event: any) => {
     event.preventDefault();
     handleSubmit(event);
-    if (state.succeeded) {
-      toast.success("Message sent successfully!");
-    }
   };
+
+  useEffect(() => {
+    if (state.succeeded) toast.success("Message sent successfully!");
+  }, [state.succeeded]);
 
   return (
     <>

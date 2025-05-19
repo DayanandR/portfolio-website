@@ -12,6 +12,20 @@ import {
   useMotionValue,
 } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import {
+  SiFirebase,
+  SiGoogle,
+  SiReact,
+  SiNodedotjs,
+  SiMongodb,
+  SiSocketdotio,
+  SiExpress,
+  SiTailwindcss,
+  SiFramer,
+  SiRedux,
+  SiJavascript,
+  SiMui,
+} from "react-icons/si";
 
 const projects = [
   {
@@ -22,6 +36,12 @@ const projects = [
     image: project1,
     link: "https://ai-trip-planner-olive-eight.vercel.app",
     github: "https://github.com/DayanandR/ai-trip-planner",
+    techStack: [
+      { name: "React", icon: <SiReact /> },
+      { name: "Node.js", icon: <SiNodedotjs /> },
+      { name: "Firebase", icon: <SiFirebase /> },
+      { name: "Google Auth", icon: <SiGoogle /> },
+    ],
   },
   {
     id: 2,
@@ -31,6 +51,11 @@ const projects = [
     image: project2,
     link: "https://loan-calculator-nine-delta.vercel.app/",
     github: "https://github.com/DayanandR/loan-calculator",
+    techStack: [
+      { name: "React", icon: <SiReact /> },
+      { name: "Material UI", icon: <SiMui /> },
+      { name: "Framer Motion", icon: <SiFramer /> },
+    ],
   },
   {
     id: 3,
@@ -40,7 +65,13 @@ const projects = [
     image: project3,
     github: "https://github.com/DayanandR/WhatsApp-clone-client",
     link: "https://whats-app-clone-client.vercel.app/",
-
+    techStack: [
+      { name: "React", icon: <SiReact /> },
+      { name: "Node.js", icon: <SiNodedotjs /> },
+      { name: "Express", icon: <SiExpress /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "Socket.io", icon: <SiSocketdotio /> },
+    ],
   },
 ];
 
@@ -110,9 +141,21 @@ const Portfolio = () => {
                   <div className="border-b-2 border-gray-200 my-4" />
                 )}
                 {selectedProject.id === project.id && (
-                  <p className="text-gray-400 transition-all duration-500 ease-in-out">
-                    {project.description}
-                  </p>
+                  <div>
+                    <p className="text-gray-400 transition-all duration-500 ease-in-out">
+                      {project.description}
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-4">
+                      {project.techStack?.map((tech, index) => (
+                        <span
+                          key={index}
+                          className="flex items-center gap-2 text-sm text-gray-300 bg-gray-800 px-3 py-1 rounded-full"
+                        >
+                          {tech.icon} {tech.name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 )}
               </div>
             ))}
