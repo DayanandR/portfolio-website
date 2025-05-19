@@ -38,7 +38,9 @@ const projects = [
     description:
       "A real-time chat application built with React, Node.js, Express, MongoDB, and Socket.io. Features include user authentication, private messaging, and real-time updates, mimicking core WhatsApp functionality.",
     image: project3,
-    github: "https://github.com/DayanandR/whatsapp-clone",
+    github: "https://github.com/DayanandR/WhatsApp-clone-client",
+    link: "https://whats-app-clone-client.vercel.app/",
+
   },
 ];
 
