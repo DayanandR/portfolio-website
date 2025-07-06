@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import project1 from "@/assets/image.png";
 import project2 from "@/assets/image2.png";
 import project3 from "@/assets/project3.png";
+import project4 from "@/assets/project4.png";
 import Image from "next/image";
 import {
   animate,
@@ -22,6 +23,11 @@ import {
   SiExpress,
   SiFramer,
   SiMui,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiClerk,
+  SiPrisma,
+  SiPostgresql,
 } from "react-icons/si";
 
 const projects = [
@@ -68,6 +74,22 @@ const projects = [
       { name: "Express", icon: <SiExpress /> },
       { name: "MongoDB", icon: <SiMongodb /> },
       { name: "Socket.io", icon: <SiSocketdotio /> },
+    ],
+  },
+  {
+    id: 4,
+    title: "Hirava – AI Career Coach",
+    description:
+      "Hirava is a smart and friendly AI-powered career coach built with Next.js, Tailwind CSS, Clerk, Prisma, and NeonDB. It helps users explore career paths, get role recommendations, and receive personalized guidance in a clean, theme-aware UI.",
+    image: project4,
+    github: "https://github.com/DayanandR/Hirava",
+    link: "https://hirava-i1lt.vercel.app/",
+    techStack: [
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+      { name: "Clerk", icon: <SiClerk /> },
+      { name: "Prisma", icon: <SiPrisma /> },
+      { name: "PostgreSQL", icon: <SiPostgresql /> },
     ],
   },
 ];
