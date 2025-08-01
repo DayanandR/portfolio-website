@@ -6,7 +6,7 @@ import React, { useRef } from "react";
 const details = [
   {
     id: 1,
-    value: "1.5+",
+    value: "2+",
     label: "Years in Industry",
     description: "Building responsive, accessible, and scalable UIs.",
   },

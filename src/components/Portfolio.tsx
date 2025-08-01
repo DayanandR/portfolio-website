@@ -120,7 +120,7 @@ const Portfolio = () => {
       repeat: Infinity,
       repeatType: "mirror",
     });
-  }, []);
+  }, [color]);
 
   if (!hasMounted) return null;
 

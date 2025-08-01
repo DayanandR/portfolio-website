@@ -10,6 +10,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import profilepic from "@/assets/profilepic.png";
 import { FiArrowRight } from "react-icons/fi";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const COLORS_TOP = ["#13FFAA", "#1E67C5", "#CE84CF", "#DD335C"];
 
@@ -23,7 +24,7 @@ export const Hero = () => {
       repeat: Infinity,
       repeatType: "mirror",
     });
-  }, []);
+  }, [color]);
 
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #000 50%, ${color})`;
   const border = useMotionTemplate`1px solid ${color}`;
@@ -42,9 +43,28 @@ export const Hero = () => {
         <h1 className="max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text font-black leading-tight text-transparent text-5xl md:text-7xl">
           Dayanand
         </h1>
+
         <Image src={profilepic} alt="profile pic" width={250} />
-        <p className="my-6 max-w-xl text-center">
-          Front-End Developer based in Bangalore, with 1.5 years of experience
+        <div className="my-4 flex gap-6 text-2xl">
+          <a
+            href="https://github.com/DayanandR"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-400"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/dayanand-rathod"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-400"
+          >
+            <FaLinkedin />
+          </a>
+        </div>
+        <p className="mb-5 max-w-xl text-center">
+          Front-End Developer based in Bangalore, with 2+ years of experience
         </p>
 
         {/* Download CV button */}
