@@ -37,7 +37,7 @@ const KeyMetrics = () => {
   return (
     <motion.section
       ref={ref}
-      className="container mx-auto px-4 py-32 text-white"
+      className="container mx-auto px-4 py-20 text-white"
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8 }}
@@ -46,12 +46,12 @@ const KeyMetrics = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.2, duration: 0.6 }}
-        className="text-6xl font-bold mb-12"
+        className="text-6xl font-bold mb-12 mx-10"
       >
         KEY METRICS
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-20">
         {details.map((item, index) => (
           <motion.div
             key={item.id}

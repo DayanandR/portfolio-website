@@ -5,6 +5,8 @@ import project1 from "@/assets/image.png";
 import project2 from "@/assets/image2.png";
 import project3 from "@/assets/project3.png";
 import project4 from "@/assets/project4.png";
+import project5 from "@/assets/project5.png";
+import project6 from "@/assets/project6.png";
 import Image from "next/image";
 import {
   animate,
@@ -28,6 +30,7 @@ import {
   SiClerk,
   SiPrisma,
   SiPostgresql,
+  SiOpenai,
 } from "react-icons/si";
 
 const projects = [
@@ -90,6 +93,36 @@ const projects = [
       { name: "Clerk", icon: <SiClerk /> },
       { name: "Prisma", icon: <SiPrisma /> },
       { name: "PostgreSQL", icon: <SiPostgresql /> },
+    ],
+  },
+  {
+    id: 5,
+    title: "AI Text Editor",
+    description:
+      "A powerful AI-driven text editor that allows users to write, format, and edit documents with real-time AI assistance. Features include grammar correction, smart suggestions, export to PDF/DOCX, and cloud sync.",
+    image: project5,
+    github: "https://github.com/DayanandR/ai-text-editor-frontend",
+    link: "https://vettam-ai-vert.vercel.app/",
+    techStack: [
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+      { name: "OpenAI API", icon: <SiOpenai /> },
+      { name: "Prisma", icon: <SiPrisma /> },
+    ],
+  },
+  {
+    id: 6,
+    title: "AI Medical Voice Agent",
+    description:
+      "A conversational AI medical assistant that uses voice input and AI models to provide real-time medical guidance, symptom checks, and healthcare information. Built with speech-to-text, AI inference, and a responsive frontend.",
+    image: project6,
+    github: "https://github.com/DayanandR/ai-medical-voice-agent",
+    link: "https://ai-medical-voice-agent-psi.vercel.app/",
+    techStack: [
+      { name: "React", icon: <SiReact /> },
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+      { name: "OpenAI API", icon: <SiOpenai /> },
     ],
   },
 ];
